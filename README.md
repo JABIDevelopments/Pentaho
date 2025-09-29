@@ -83,3 +83,54 @@ The installation process will begin. Click the Install button to accept the lice
 Oracle collaborates with companies that offer various products. The installer may offer you the option to install these programs as part of the Java installation. Once you have selected the desired programs, click Next to continue the installation process.
 
 Several dialog boxes will open with information to complete the final steps of the installation process; click Close in the final dialog box. This will complete the Java installation process.
+
+## 2. How to run Data Integration
+
+2.1. Go to the Data Integration root path 
+
+2.2 For example: cd /opt/pentaho/pdi/data-integration/
+
+2.3 sh -x  spoon.sh
+
+<img src="./assets/pdi.png" alt="Data Integration" title="Data Integration" width=500 height=280/>
+
+## 3. How to run Report Designer
+
+3.1 Go to the Report Designer root path 
+
+3.2 For example: cd /opt/pentaho/prd/report-designer/
+
+3.3 sh -x report-designer.sh
+
+<img src="./assets/prd_d.png" alt="Report Designer" title="Report Designer" width=500 height=280/>
+
+<img src="./assets/prd_i.png" alt="Report Designer" title="Report Designer" width=500 height=280/>
+
+## 4. How to run Pentaho Server
+
+4.1 Go to the Pentaho Server root path 
+
+4.2 For example: cd /opt/pentaho/pentaho-server/
+
+4.3 sh -x start-pentaho.sh 
+
+<img src="./assets/pbi_l.png" alt="Report Server" title="Report Server" width=500 height=280/>
+
+<img src="./assets/pbi_i.png" alt="Report Server" title="Report Server" width=500 height=280/>
+
+<img src="./assets/pbi_r.png" alt="Report Server" title="Report Server" width=500 height=280/>
+
+4.4 It's possible to change the default port: 8080
+
+cd /opt/pentaho/pentaho-server/tomcat/conf/
+
+nano server.xml
+
+<div>
+--<Connector port="8787" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+</div>
+
+port="8787"
+redirectPort="8443"
